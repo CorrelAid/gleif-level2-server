@@ -1,0 +1,1 @@
+docker run backend:latest -p 8000:8000 -v ./data:/data:ro --network=gleif

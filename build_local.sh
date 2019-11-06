@@ -1,0 +1,1 @@
+docker build -t registry.gitlab.com/gleif_it/correlaid/backend:latest .

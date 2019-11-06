@@ -1,0 +1,6 @@
+.idea
+*.zip
+\.pytest_cache/
+data/gleif_rr\.csv
+data/gleif_lei\.csv
+__pycache__/
