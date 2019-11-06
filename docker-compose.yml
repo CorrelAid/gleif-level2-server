@@ -1,0 +1,14 @@
+version: "3"
+services:
+  backend:
+    image: gleif-backend:latest
+    build: . 
+    restart: unless-stopped
+    networks: 
+      - gleif
+    volumes:
+      - ./data:/data:ro
+    ports:
+      - "8000:8000"
+networks:
+  gleif:
