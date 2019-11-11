@@ -5,9 +5,9 @@ from graph import Graph
 
 
 @pytest.fixture(scope="class")
-def setup():
-    rr_csv = os.path.join("data", "gleif_rr.csv")
-    lookup_csv = os.path.join("data", "gleif_lei.csv")
+def setup(request):
+    rr_csv = os.path.join(request.config.rootdir, "data", "gleif_rr.csv")
+    lookup_csv = os.path.join(request.config.rootdir, "data", "gleif_lei.csv")
     lei = "969500WU8KVE8U3TL824"
     builder = DirectNodeGraphWithParentNetworkBuilder()
 
@@ -24,7 +24,6 @@ def setup():
     return structure, lei
 
 
-@pytest.mark.skip("Only for local testing when data is available")
 def test_structure_exists(setup):
 
     structure, _ = setup
@@ -34,7 +33,6 @@ def test_structure_exists(setup):
     assert len(structure["edges"]) == 0
 
 
-@pytest.mark.skip("Only for local testing when data is available")
 def test_a2_node_is_level_0(setup):
     # this LEI does not have an ultimate parent
 

@@ -19,7 +19,6 @@ def lookup_csv(request):
     return os.path.join(request.config.rootdir, "data", "gleif_lei.csv")
 
 
-@pytest.mark.skip("Only for local testing when data is available")
 def test_samsung_ultimate_parent(builder, lookup_csv, rr_csv):
     samsung_lei = "549300KYVNLA5XR0HT53"
     ultimate_parent_lei = "9884007ER46L6N7EI764"
