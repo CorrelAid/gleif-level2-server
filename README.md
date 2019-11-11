@@ -32,6 +32,8 @@ e.g. in conda / venv:
 uvicorn app:api --reload --root-path src
 ```
 
+This makes the API available under [http://localhost:8000/](http://localhost:8000/).
+
 #### test
 
 ```
@@ -68,6 +70,7 @@ or demonized:
 docker-compose up -d
 ```
 
+This makes the API available under [http://localhost:8000/](http://localhost:8000/).
 
 ### logs 
 
@@ -105,6 +108,9 @@ docker-compose build
 ```
 docker-compose up -d
 ```
+
+This makes the API available under [http://localhost:8000/](http://localhost:8000/) on your server. Configure a reverse proxy (e.g. [Nginx](https://www.nginx.com/)) to make the API available to other machines. 
+
 
 ### logs 
 
